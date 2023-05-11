@@ -1,0 +1,179 @@
+/* reset css */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#main{}
+
+#header{
+    height: 46.5px;
+    background-color: black;
+    /* giữ cho header không đổi khi cuộn content */
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    /* các left right =0 để dính sát header vào 2 bên phải trái */
+    z-index: 1;
+    /* nổi header lên  */
+}
+
+#nav{
+    display: inline-block;
+}
+
+html{
+    font-family: Arial, Helvetica, sans-serif;
+}
+#nav li{
+    display: inline-block; 
+    /* nằm trên một hàng */
+    position: relative;
+    text-transform:uppercase;
+    
+}
+#nav .nav-font {
+    font-size: 10px;
+}
+
+#nav li a{
+    /* giải thích là chỉ tác động đến thằng a và a là con của li và li là con của nav 
+    và ảnh hưởng tất cả các thẻ a con của li , dù là cấp 2 hay 3 */
+     /* color: white; */
+    text-decoration: none; 
+    /* bỏ dấu gạch chân */
+    line-height: 46.5px;
+    padding: 0 24px;
+    
+    display: inline-block;
+   
+}
+/* di chuột vào chữ đổi màu */
+#nav > li:hover > a{
+    /* li:hover thì sẽ áp dụng các thẻ con của li , ở đây là a */
+    color: blueviolet;
+    background-color: #e9c3c3;
+    
+}
+
+#nav .subnav{
+    /* display: none; */
+    /* none là ẩn đi  */
+    position: absolute;
+    display: none;
+    background-color: white;
+}
+
+#nav > li > a {
+    /* tác động cấp 1, kiểu như chỉ tác động đến li là con trực tiếp của nav và a là con trực tiếp của li
+    tác động đến more, home.vv chứ k tác động đến media... */
+    color: white;
+}
+#nav li:hover .subnav {
+    display: block;
+       
+}
+#nav .subnav li:hover  {
+    color: black;
+    display: block;
+    line-height: 38px;
+    background-color: cyan;
+    
+}
+/* search */
+#header .search-button:hover{
+    background-color: #f44336;
+    cursor: pointer;
+    /* quyết định hình dạng con trỏ chuột , rê đến đổi hình bàn tay */
+}
+
+#header .search-button{
+    float: right;
+    padding: 0 21px;
+    
+}
+
+#header .search-icon{
+    color: white;
+    font-size: 20px;
+    line-height: 46px; 
+    
+}
+
+#slider{
+    position: relative;
+    min-height: 500px;
+    background-color: rgb(19, 200, 206);
+    margin-top: 46.5px;
+    padding: 30%;
+    /* 50% chiều cao bằng 50% chiều rộng của nó */
+    background: url('/Assets/img/Slider/siu.jpg') top center / cover no-repeat;
+    /* url - vị trí - kích thước ảnh - no repeat  */
+}
+#slider .text-content{
+    position: absolute;
+    bottom: 48px;
+    color: rgb(49, 4, 4);
+    left: 50%;
+    
+    text-align: center;
+
+}
+#slider .header-content{
+    font-weight: 500px;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+#slider .Main-content{
+    font-size: 15px;
+    margin-top: 15px;
+    
+}
+#content{
+    background-color: white;
+    height: 1000px;
+
+}
+
+#content .content-section{
+    width: 800px;
+    margin-right: auto;
+    margin-left: auto;
+    /* margin top , left : đẩy 1 khoảng ra giữa  */
+    padding: 64px 0;
+}
+#content .section-heading{
+    font-size: 30px;
+    font-weight: 500;
+    /* làm cho chữ my idol mỏng đi */
+    letter-spacing: 4px;
+    /* làm cho khoảng cách giữa các chữ nó rộng ra xíu */
+}
+#content .section-sub-heading{
+    font-size: 15px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    font-style: italic; 
+    /* chữ nghiêng  */
+    opacity: 0.6;
+    /* làm mờ */
+}
+
+#content .section-heading, 
+#content .section-sub-heading{
+    text-align: center;
+}
+#content .about-text{
+    margin-top: 25px;
+    font-size: 15px;
+    text-align: justify;
+    /* căn đều 2 bên  */
+    line-height: 1.4;
+    /* độ cao của dòng  */
+}
+
+
+#footer{} 
